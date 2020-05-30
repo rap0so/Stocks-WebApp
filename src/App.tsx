@@ -12,7 +12,7 @@ import theme from 'providers/theme';
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading full={true} />}>
       <Router>
         <Switch>
           <Route path="/" component={lazy(() => import('pages/home'))} />
