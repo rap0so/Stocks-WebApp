@@ -29,9 +29,8 @@ const Home: FC = () => {
     [],
   );
 
-  // TODO: type this reducer properly
   const [currentWatching, setCurrentWatching] = useReducer(
-    (_: any, newState: TStocksSymbols) => {
+    (_: TStocksSymbols, newState: TStocksSymbols) => {
       Object.keys(historyStocks).forEach((key) => {
         const historyKey = key as TStocksSupportedSymbols;
         if (!newState.includes(historyKey)) {

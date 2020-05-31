@@ -73,6 +73,17 @@ yarn lint
 yarn lint:fix
 ```
 
+## TODO:
+
+- [ ] add e2e tests
+- [ ] change throttle time based on user usage
+- [ ] type server
+- [ ] add unit tests to non components
+- [ ] fragment code from home to providers
+- [ ] find a alternative to apex that can handle multiple series easily
+- [ ] apply storybook to create a developer documentation
+- [ ] fallback to other server when the default gets down
+
 ## Build with
 
 - [cra](https://create-react-app.dev) - Most common boilerplate to start react

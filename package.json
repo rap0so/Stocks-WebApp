@@ -5,15 +5,13 @@
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "build": "react-scripts build",
-    "cy:run": "cypress run",
     "eject": "react-scripts eject",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "start": "react-scripts start",
     "test": "react-scripts test --passWithNoTests --watchAll=false",
     "test:cov": "react-scripts test --coverage --passWithNoTests --watchAll=false",
-    "test:watch": "react-scripts test",
-    "test:e2e": "PORT=4200 start-server-and-test start 4200 cy:run"
+    "test:watch": "react-scripts test"
   },
   "dependencies": {
     "@rehooks/local-storage": "^2.4.0",
@@ -29,7 +27,6 @@
     "reconnecting-websocket": "^4.4.0",
     "reflexbox": "^4.0.6",
     "socket.io-client": "^2.3.0",
-    "start-server-and-test": "^1.11.0",
     "styled-components": "^5.1.1",
     "throttle-debounce": "^2.1.0",
     "typescript": "3.9.3"
