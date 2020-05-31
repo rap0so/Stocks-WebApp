@@ -23,7 +23,7 @@ export const options = {
     range: 100,
   },
   yaxis: {
-    min: 100,
     forceNiceScale: true,
+    min: 100,
   },
 };
