@@ -12,6 +12,14 @@ const SelectStocksStyled = styled.ul(({ theme }: { theme: TTheme }) => ({
   listStyleType: 'none',
   margin: 0,
   padding: '0 15px 15px',
+  span: {
+    background: '#46882c',
+    borderRadius: '100px',
+    display: 'inline-block',
+    height: ' 10px',
+    marginLeft: ' 30px',
+    width: ' 10px',
+  },
 }));
 
 export default SelectStocksStyled;
