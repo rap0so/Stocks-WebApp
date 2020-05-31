@@ -24,6 +24,5 @@ export const options = {
   },
   yaxis: {
     forceNiceScale: true,
-    min: 100,
   },
 };

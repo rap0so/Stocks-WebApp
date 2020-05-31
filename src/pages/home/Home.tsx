@@ -94,6 +94,15 @@ const Home: FC = () => {
       if (data.event === 'connected') {
         const possibleStocks = getPossibleStocks(data);
         setPossibleStocksToWatch(possibleStocks);
+
+        if (savedStocks.length) {
+          const messageToWS = JSON.stringify({
+            event: 'subscribe',
+            stocks: savedStocks,
+          });
+
+          socket.send(messageToWS);
+        }
       }
 
       if (data.event === 'stocks-update') {
