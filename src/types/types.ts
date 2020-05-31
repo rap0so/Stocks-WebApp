@@ -31,3 +31,9 @@ export type TStocksData = {
   companyName: string;
   symbol: TStocksSupportedSymbols;
 };
+
+declare global {
+  interface Window {
+    ApexCharts: any;
+  }
+}
