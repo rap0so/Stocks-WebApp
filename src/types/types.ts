@@ -1,4 +1,4 @@
-export type TPossibleStock =
+export type TStocksSupportedSymbols =
   | 'IET'
   | 'N'
   | 'ZHT'
@@ -20,7 +20,14 @@ export type TPossibleStock =
   | 'XLC'
   | 'S';
 
-export type TStocksSymbols = TPossibleStock[];
+export type TStocksSymbols = TStocksSupportedSymbols[];
 
 // TODO: type it as server response
 export type TMessageData = any;
+
+export type TStocksData = {
+  basePrice: number;
+  catchPhrase: string;
+  companyName: string;
+  symbol: TStocksSupportedSymbols;
+};
