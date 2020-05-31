@@ -1,6 +1,6 @@
 import { TGetPossibleStocks } from './types';
 
 const getPossibleStocks: TGetPossibleStocks = (messageResponse) =>
-  messageResponse.supportedSymbols;
+  messageResponse.stocksData;
 
 export default getPossibleStocks;
