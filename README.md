@@ -81,6 +81,8 @@ yarn lint:fix
 - [ ] add unit tests to non components
 - [ ] fragment code from home to providers
 - [ ] find a alternative to apex that can handle multiple series easily
+- [ ] apply storybook to create a developer documentation
+- [ ] fallback to other server when the default gets down
 
 ## Build with
 
