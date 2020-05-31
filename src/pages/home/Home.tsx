@@ -114,7 +114,7 @@ const Home: FC = () => {
     socket.addEventListener('error', (errorEvent) => {
       throw new Error(`Socket Error -> ${errorEvent}`);
     });
-  }, [onReceiveData]);
+  }, [onReceiveData, savedStocks]);
 
   if (isLoading) {
     return <Loading />;
@@ -128,6 +128,7 @@ const Home: FC = () => {
         <Flex mt={5}>
           <Box maxWidth="220px" width="100%">
             <SelectStocks
+              currentWatching={currentWatching}
               onClick={onStockClick}
               stocks={possibleStocksToWatch}
             />

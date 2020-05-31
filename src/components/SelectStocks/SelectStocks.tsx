@@ -8,7 +8,11 @@ import SelectStocksStyled from './SelectStocksStyled';
 
 export const TIME_TO_THROTTLE: number = 800;
 
-const SelectStocks: FC<TSelectStocksProps> = ({ onClick, stocks }) => {
+const SelectStocks: FC<TSelectStocksProps> = ({
+  currentWatching,
+  onClick,
+  stocks,
+}) => {
   const throttledOnClick = throttle(
     TIME_TO_THROTTLE,
     (listValue: TStocksSupportedSymbols) => onClick(listValue),
@@ -37,6 +41,7 @@ const SelectStocks: FC<TSelectStocksProps> = ({ onClick, stocks }) => {
             onClick={onThrottledOnClick}
           >
             {stock.companyName}
+            {currentWatching.includes(stock.symbol) && <span />}
           </li>
         ))}
       </SelectStocksStyled>
