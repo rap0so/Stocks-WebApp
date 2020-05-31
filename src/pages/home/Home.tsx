@@ -6,6 +6,7 @@ import { Box, Flex } from 'reflexbox';
 import { options as chartOptions } from 'consts/chart';
 import Container from 'components/Container';
 import Loading from 'components/Loading';
+import Error from 'components/Error';
 import SelectStocks from 'components/SelectStocks';
 import Title from 'components/Title';
 import { addItemToArray, rmItemFromArray } from 'helpers/array';
@@ -21,6 +22,7 @@ import { THistoryStocks, TNewStock } from './types';
 const Home: FC = () => {
   const [historyStocks, setHistoryStocks] = useState<THistoryStocks>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [hasError, setHasError] = useState<boolean>(false);
 
   const [savedStocks, setSavedStocks] = useLocalStorage<TStocksSymbols>(
     'savedStocks',
@@ -110,11 +112,12 @@ const Home: FC = () => {
       }
     });
 
-    // TODO: implement error handler cmp
-    socket.addEventListener('error', (errorEvent) => {
-      throw new Error(`Socket Error -> ${errorEvent}`);
-    });
+    socket.addEventListener('error', () => setHasError(true));
   }, [onReceiveData, savedStocks]);
+
+  if (hasError) {
+    return <Error />;
+  }
 
   if (isLoading) {
     return <Loading />;

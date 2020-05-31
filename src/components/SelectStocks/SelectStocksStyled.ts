@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { TTheme } from 'providers/theme/types';
 
 const SelectStocksStyled = styled.ul(({ theme }: { theme: TTheme }) => ({
-  color: theme.colors.base,
+  color: theme?.colors?.base || '#fff',
   li: {
     borderBottom: '1px solid #393939',
     cursor: 'pointer',

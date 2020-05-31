@@ -25,6 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spinners": "^0.8.3",
+    "react-tooltip": "^4.2.6",
     "reconnecting-websocket": "^4.4.0",
     "reflexbox": "^4.0.6",
     "socket.io-client": "^2.3.0",
